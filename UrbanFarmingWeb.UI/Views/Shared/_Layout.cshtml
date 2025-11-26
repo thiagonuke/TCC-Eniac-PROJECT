@@ -1,0 +1,159 @@
+﻿@{
+    var nome = ViewBag.Name;
+}
+<style>
+    /* Underline Effect*/
+    .nav-item {
+        position: relative;
+    }
+
+    .navbar-collapse ul li a.nav-link:before {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: transparent;
+        content: '';
+        opacity: 0;
+        -ms-transition: opacity 0.3s, -webkit-transform 0.3s;
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+        transition: opacity 0.3s, transform 0.3s;
+        -ms-transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+
+    .navbar-collapse ul li:hover a.nav-link:before {
+        opacity: 1;
+        -ms-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        bottom: 0px;
+        background: blue;
+    }
+
+    .dropdown-item:hover, .dropdown-item:focus {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: blue;
+    }
+
+    .dropdown-menu {
+        border: 0px;
+    }
+
+    body {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    @@media (max-width: 992px) {
+        #idlogo {
+            margin-left:45vw ;
+        }
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zentrix Solutions and Systems</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/UrbanFarmingWeb.UI.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg shadow-lg navbar-light" style="background-color: rgb(44, 56, 64);">
+            <a class="navbar-brand" href="#"><img id="idlogo" src="~/images/logo.png" width="100" /></a>
+
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../Produtos/Index">Compra de Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../Fornecedor/Index">Cadastro de Fornecedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../Pedidos/Index">Pedidos</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="border rounded shadow p-2 d-flex align-items-center mr-2">
+                        <img src="~/images/profile-user.png" width="25" />
+                        <h6 id="usuario-nav" class="text-white ml-2"></h6>
+                    </div>
+                    <a id="logout" style="cursor:pointer;">
+                        <img src="~/images/logout.png" width="30" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted d-flex justify-content-center">
+        <div class="container text-white d-flex justify-content-center">
+            &copy; 2024 - ZentrixWeb.UI
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function () {
+        $('#navbarDropdown').mouseenter(function () {
+            $('.dropdown-menu').slideToggle(300, "linear");
+        });
+
+        $('.dropdown-menu').mouseleave(function () {
+            $(this).slideToggle(300, "linear");
+        });
+
+        var name = `${"@ViewData["Nome"]"}`;
+
+         if (name != "") {
+            document.getElementById("usuario-nav").textContent = `Olá ${name}`
+
+         }
+
+    });
+
+    $("#logout").on("click", function () { 
+        $.ajax({
+            url: '../Seguranca/Logout',
+            method:"GET",
+            success: function (response) {
+                window.location.href = "../"
+            }
+        });
+     
+    })
+
+    $(document).ready(function () {
+
+        var nam = '@nome'
+
+        if (nam !== "") {
+            document.getElementById("usuario-nav").textContent = `Olá ${nam}`;
+        }
+
+    });
+   
+</script>

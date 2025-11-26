@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppMobileUrban.Models" 
+             xmlns:viewmodels="clr-namespace:AppMobileUrban.ViewModels" 
+             x:Class="AppMobileUrban.Views.PedidosPage"
+             BackgroundColor="Green">
+
+    <!-- Definindo o contexto de dados -->
+    <ContentPage.BindingContext>
+        <viewmodels:PedidosViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Pedidos" 
+                   FontSize="24" 
+                   HorizontalOptions="Center" 
+                   TextColor="White"
+                   Margin="0,20,0,10" />
+            <BoxView HeightRequest="1" BackgroundColor="White" HorizontalOptions="FillAndExpand" />
+
+            <!-- CollectionView para exibir a lista de pedidos -->
+            <CollectionView ItemsSource="{Binding Pedidos}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" 
+                              ColumnSpacing="10" 
+                              BackgroundColor="#313D42"
+                              RowSpacing="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Campos exibidos com formatação -->
+                            <Label Text="{Binding CodigoPedido}" 
+                                   Grid.Column="0" 
+                                   TextColor="White" 
+                                   FontAttributes="Bold"/>
+
+                            <Label Text="{Binding ValorTotal, StringFormat='R$ {0:F2}'}" 
+                                   Grid.Column="1" 
+                                   TextColor="White" />
+
+                            <Label Text="{Binding Usuario}" 
+                                   Grid.Column="2" 
+                                   TextColor="White" />
+
+                            <Label Text="{Binding Data, StringFormat='{0:dd/MM/yyyy}'}" 
+                                   Grid.Column="3" 
+                                   TextColor="White" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

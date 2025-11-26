@@ -1,0 +1,174 @@
+﻿
+<style>
+    *{
+        color: white;
+
+    }
+
+</style>
+<!doctype html>
+<html lang="en">
+<body style="background-color: seagreen;">
+
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <h3 class="mt-4">Pessoa Jurídica ou Física</h3>
+                <hr />
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="pessoaTipo" id="pessoaJuridica" value="juridica" onclick="mostrarCampos()" required>
+                    <label class="form-check-label" for="pessoaJuridica">Pessoa Jurídica (CNPJ)</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="pessoaTipo" id="pessoaFisica" value="fisica" onclick="mostrarCampos()" required>
+                    <label class="form-check-label" for="pessoaFisica">Pessoa Física (CPF)</label>
+                </div>
+            </div>
+        </div>
+        <div id="campoCNPJ" style="display: none;">
+            <div class="form-group col-md-6">
+                <label for="inputCNPJ">CNPJ</label>
+                <input type="text" class="form-control" id="inputCNPJ" placeholder="CNPJ (14 dígitos)" pattern="\d{14}" title="O CNPJ deve conter 14 dígitos">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputRazaoSocial">Razão Social</label>
+                <input type="text" id="inputRazaoSocial" class="form-control" placeholder="Razão Social" >
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputNomeFantasia">Nome Fantasia</label>
+                <input type="text" id="inputNomeFantasia" class="form-control" placeholder="Nome Fantasia" >
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="inputEnquadramentoEstadual">Enquadramento Estadual</label>
+                <input type="text" class="form-control" id="inputEnquadramentoEstadual" placeholder="Enquadramento Estadual" >
+            </div>
+        </div>
+
+        <div id="campoCPF" style="display: none;">
+            <div class="form-group col-md-6">
+                <label for="inputCPF">CPF</label>
+                <input type="text" class="form-control" id="inputCPF" placeholder="CPF (11 dígitos)" pattern="\d{11}" title="O CPF deve conter 11 dígitos">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputNome">Nome Completo</label>
+                <input type="text" id="inputNome" class="form-control" placeholder="Nome Completo">
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail">Email</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="email@empresa.com" >
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputTelefone">Telefone</label>
+            <input type="text" id="inputTelefone" class="form-control" placeholder="Telefone" >
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEndereco">Endereço</label>
+            <input type="text" id="inputEndereco" class="form-control" placeholder="Endereço" >
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCEP">CEP</label>
+            <input type="text" id="inputCEP" class="form-control" placeholder="CEP" >
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputPaisOrigem">País de Origem</label>
+            <input type="text" class="form-control" id="inputPaisOrigem" placeholder="País de Origem" >
+        </div>
+        <div class="col-md-12 d-flex justify-content-center mt-4">
+            <button type="button" id="btncadastro" onclick="SalvarFornecedor()" class="btn btn-outline-light rounded-3">Cadastrar</button>
+        </div>
+       
+    </form>
+
+   
+</body>
+</html>
+<script src="~/js/jquery.min.js"></script>
+<script>
+
+    function mostrarCampos() {
+        var pessoaJuridica = document.getElementById("pessoaJuridica").checked;
+        var pessoaFisica = document.getElementById("pessoaFisica").checked;
+
+        if (pessoaJuridica) {
+            document.getElementById("campoCNPJ").style.display = "block";
+            document.getElementById("campoCPF").style.display = "none";
+        }
+        else if (pessoaFisica) {
+            document.getElementById("campoCNPJ").style.display = "none";
+            document.getElementById("campoCPF").style.display = "block";
+        }
+    }
+
+    $('#inputCNPJ').on('blur', function () {
+        let cnpj = document.getElementById('inputCNPJ').value;
+        if (cnpj.length === 14) {
+            $.ajax({
+                url: `https://www.receitaws.com.br/v1/cnpj/${cnpj}`,
+                method: 'GET',
+                dataType: 'jsonp',
+                success: function (data) {
+                    
+                    if (data.status === 'OK') {
+                        document.getElementById('inputRazaoSocial').value = data.nome;
+                        document.getElementById('inputNomeFantasia').value = data.fantasia;
+                        document.getElementById('inputEmail').value = data.email || 'N/A';
+                        document.getElementById('inputTelefone').value = data.telefone || 'N/A';
+                        document.getElementById('inputEndereco').value = `${data.logradouro}, ${data.numero} - ${data.bairro}`;
+                        document.getElementById('inputCEP').value = data.cep;
+                        document.getElementById('inputPaisOrigem').value = "Brasil";
+                        document.getElementById('inputEnquadramentoEstadual').value = data.natureza_juridica;
+                    } else {
+                        toastr.error('CNPJ inválido ou não encontrado.');
+                    }
+                },
+                error: function () {
+                    alert('Erro ao consultar CNPJ.');
+                }
+            });
+        }
+
+    });
+
+    function SalvarFornecedor() {
+        debugger
+        var pessoaJuridica = $('#pessoaJuridica').is(':checked');
+        var pessoaFisica = $('#pessoaFisica').is(':checked');
+        
+        if (pessoaJuridica != false || pessoaFisica != false){
+
+            $.ajax({
+                url: '../Fornecedor/CadastrarFornecedor',
+                method: "POST",
+                data: JSON.stringify({
+                    Codigo: $('#inputCodigo').val(),
+                    RazaoSocial: pessoaJuridica ? $('#inputRazaoSocial').val() : $("#inputNome").val(),
+                    NomeFantasia: pessoaJuridica ? $('#inputNomeFantasia').val() : null,
+                    CNPJ: pessoaJuridica ? $('#inputCNPJ').val().replace(".", '').replace('/', '').replace('-', '') : null,
+                    CPF: pessoaFisica ? $('#inputCPF').val() : null,
+                    NomeCompleto: pessoaFisica ? $('#inputNome').val() : null,
+                    Email: $('#inputEmail').val(),
+                    PaisOrigem: $('#inputPaisOrigem').val(),
+                    EnquadramentoEstadual: $('#inputEnquadramentoEstadual').val(),
+                    PessoaJuridica: pessoaJuridica,
+                    PessoaFisica: pessoaFisica
+                }),
+                contentType: 'application/json; charset=utf-8',
+                success: function (response) {
+                    alert("Cadastro realizado com sucesso!");
+                },
+                error: function (error) {
+                    alert("Erro ao realizar o cadastro.");
+                }
+            });
+        }else{
+            alert("Selecione as opções para prosseguir!")
+        }
+
+
+        
+    }
+
+
+</script>

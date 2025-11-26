@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationId>com.companyname.UrbanFarming.Mobile</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FubarCoder.RestSharp.Portable.HttpClient" Version="4.0.8" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
+  </ItemGroup>
+</Project>

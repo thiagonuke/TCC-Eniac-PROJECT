@@ -1,0 +1,211 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+	header {
+		display:none !important;
+	}
+
+	body {
+		overflow-x: hidden; 
+	}
+
+	.popup {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.popup-content {
+		color: white;
+		background-color: rgb(44, 56, 64);
+		margin: 5% auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 50vw;
+		border-radius: 10px; 
+		animation: fadeIn 0.3s; 
+		transform: scale(0.9);
+		opacity: 0;
+	}
+
+	.popup-content.show {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	@@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.close {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+</style>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Zentrix Solutions and Systems</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body class="img container-fluid" style="background-image: url(images/bg.jpg);">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Zentrix Solutions and Systems</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+						<h3 class="mb-4 text-center">Login</h3>
+						<form action="#" class="signin-form">
+							<div class="form-group">
+								<input type="text" class="form-control" id="usuario" placeholder="Usuario" required>
+							</div>
+							<div class="form-group">
+								<input id="password-field" type="password" class="form-control" placeholder="Senha" required>
+								<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+							</div>
+							<div class="form-group">
+								<button id="Login" class="form-control btn btn-primary px-3"style="color: white !important; background-color: transparent !important; border-color	:white !important; ">Sign In</button>
+							</div>
+							<div class="form-group d-md-flex">
+								<div class="w-50">
+									<label class="checkbox-wrap checkbox-primary" style="color: white !important;">
+										Remember Me
+										<input style="background-color: white !important; accent-color: white !important;" type="checkbox" checked>
+										<span style="color: white !important;" class="checkmark"></span>
+									</label>
+								</div>
+								<div class="w-50 text-md-right">
+									<a id="openPopup" style="color: #fff; cursor:pointer;">Não possui Cadastro?</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div id="popup" class="popup">
+		<div class="popup-content">
+			<span class="close" style="color: white;" id="closePopup">&times;</span>
+			<h2 style="color: white;">Cadastro</h2>
+			<hr />
+			<form id="registrationForm" class="d-flex flex-column justify-content-center align-items-center text-white">
+				<label for="name">Nome:</label>
+				<input type="text" id="name" class="rounded-3 border border w-75 p-1 text-black" style="background-color:white" placeholder="Nome" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" class="rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="Email" required>
+				<label for="password">Senha:</label>
+				<input type="password" id="password-field" class="firstPassword rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="Senha" required>
+				<label for="confirmPassword">Confirmar Senha:</label>
+				<input type="password" id="password-field" class="confirmPassword rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="Senha" required> <br />
+				<button type="button" id="btncadastro" class="btn btn-outline-light rounded-3">Cadastrar</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/popper.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/main.js"></script>
+
+</body>
+</html>
+
+
+<script>
+
+
+	$("#Login").on("click", function () {
+
+		$.ajax({
+			url: './Seguranca/Login',
+			method: "POST", 
+			data: JSON.stringify({
+				Email: $('#usuario').val().toString(),
+				Senha: $('#password-field').val().toString()
+			}),
+			contentType: 'application/json; charset=utf-8',
+			success: function (response) {
+				if (response.includes("Success")) {
+					window.location.href = "../Home/MenuHome"
+				}else{
+					alert(response)
+				}
+				
+			},
+			error: function (xhr, status, error) {
+				alert(error)
+			}
+		});
+	});
+	
+	$("#btncadastro").on("click", function () {
+
+		if ($('.firstPassword').val().toString() == $('.confirmPassword').val().toString()) {
+			$.ajax({
+				url: './Seguranca/CadastrarUser',
+				method: "POST",
+				data: JSON.stringify({
+					Email: $('#email').val().toString(),
+					Senha: $('.firstPassword').val().toString(),
+					Nome: $('#name').val().toString().toString()
+				}),
+				contentType: 'application/json; charset=utf-8',
+				success: function (response) {
+					if (response.includes("Success")) {
+						alert(response)
+					} else {
+						alert(response)
+					}
+
+				},
+				error: function (xhr, status, error) {
+					alert(error)
+				}
+			});
+		} else {
+			alert("Senhas não se coincidem")
+		}
+
+		
+	});
+
+
+</script>

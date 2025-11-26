@@ -1,0 +1,495 @@
+﻿@model List<UrbanFarming.Domain.Classes.Produtos>
+
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product-card {
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .product-card h2 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+    button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @@media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+
+        .product-card {
+            padding: 10px;
+        }
+    }
+
+    @@media (max-width: 480px) {
+        .product-grid {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .open-cart-btn {
+        padding: 10px 20px;
+        background-color: whitesmoke;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .cart {
+        width: 300px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        position: fixed;
+        top: 0;
+        right: -350px;
+        height: 100vh;
+        transition: right 0.4s ease;
+    }
+
+        .cart.open {
+            right: 0;
+        }
+
+    .cart-items {
+        list-style: none;
+        padding: 0;
+    }
+
+        .cart-items li {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+    .total-price {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .checkout-btn {
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .close-cart-btn {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 4% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+</style>
+
+<!doctype html>
+<html lang="en">
+<body style="background-color: seagreen;">
+    <div class="col-md-12 d-flex justify-content-end">
+        <button class="open-cart-btn">
+            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/shopping-cart--v1.png" alt="shopping-cart--v1" />
+        </button>
+        @if (ViewBag.Adm == true)
+        {
+            <button class="open-cadastro-prod bg-white rounded-circle ms-5">
+                <img width="24" height="24" src="https://img.icons8.com/?size=100&id=1501&format=png&color=000000" alt="shopping-cart--v1" />
+            </button>
+        }
+    </div>
+
+    <section class="product-grid mt-4">
+        @foreach (var prod in Model)
+        {
+
+            <div class="product-card d-flex flex-column justify-content-around shadow-lg">
+                @if (ViewBag.Adm == true)
+                {
+                    <div class="col-md-2 rounded-circle bg-danger d-flex justify-content-center align-items-center">
+                        <span class="remove-prod close">&times;</span>
+                    </div>
+
+                }
+                <img src="@prod.LinkImagem">
+                <h2>@prod.Nome</h2>
+                <p>@prod.Codigo</p>
+                <span>@prod.Descricao</span>
+                <h4><b>R$ @prod.Valor</b></h4>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+        }
+    </section>
+
+    <aside class="cart">
+        <button class="close-cart-btn">X</button>
+        <h2>Carrinho</h2>
+        <ul class="cart-items"></ul>
+        <p>Total: <span class="total-price">R$ 0.00</span></p>
+        <button class="checkout-btn" id="checkout-btn" onclick="FinalizarPedidos()">Finalizar Compra</button>
+    </aside>
+
+    <!-- Modal de Cadastro de Produto -->
+    <div id="produtoModal" class="modal">
+        <div class="modal-content">
+            <div class="col-md-12 d-flex justify-content-between align-items-center">
+                <h2>Cadastrar Produto</h2>
+
+                <span class="close">&times;</span>
+            </div>
+            <hr />
+            <form id="produtoForm" class="d-flex flex-column align-items-center text-white">
+                <label style="color:black;" for="codigo">Código:</label>
+                <input type="text" id="codigo" class="rounded-3 border border w-75 p-1 text-black" style="background-color:white" placeholder="codigo" required>
+
+                <label style="color:black;" class="mt-3" for="nome">Nome:</label>
+                <input type="text" id="nome" class="rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="nome" required>
+
+                <label style="color:black;" class="mt-3" for="valor">Valor:</label>
+                <input type="number" step="0.01" id="valor" class="rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="valor" required>
+
+                <label style="color:black;" class="mt-3" for="descricao">Descrição:</label>
+                <textarea id="descricao" class="rounded-3 border w-75 p-1 text-black" name="descricao"></textarea>
+
+                <label style="color:black;" class="mt-3" for="linkImagem">Link da Imagem:</label>
+                <input type="text" id="linkImagem" class="rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="linkImagem" required>
+
+                <button class="w-100 mt-3" type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/toastr.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet">
+
+<script>
+    const cart = document.querySelector('.cart');
+    const openCartBtn = document.querySelector('.open-cart-btn');
+    const closeCartBtn = document.querySelector('.close-cart-btn');
+
+    const checkoutbtn = document.querySelector('#checkout-btn');
+    debugger
+    const removeprod = document.querySelector('#removeprod');
+    const cartItemsList = document.querySelector('.cart-items');
+    const totalPriceElement = document.querySelector('.total-price');
+    const addToCartButtons = document.querySelectorAll('.product-card button');
+
+
+    let cartItems = [];
+    let total = 0.0;
+
+    openCartBtn.addEventListener('click', () => {
+        cart.classList.add('open');
+    });
+
+    closeCartBtn.addEventListener('click', () => {
+        cart.classList.remove('open');
+    });
+
+
+    checkoutbtn.addEventListener('click', () => {
+        toastr.success("Compra Finalizada com sucesso!")
+        cart.classList.remove('open');
+    });
+
+    try {
+        debugger
+        removeprod.addEventListener('click', (e) => {
+            const productCard = e.target.closest('.product-card');
+
+            const productCod = productCard.querySelector('p').textContent;
+
+            RemoveItem(productCod)
+
+        });
+
+    } catch (ex) { 
+        debugger
+
+        var teste = ""
+    }
+
+    function RemoveItem(productCod) {
+        debugger
+        $.ajax({
+            url: '/Produtos/Deletar',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(productCod),
+            success: function (response) {
+                alert('Produto deletado com Sucesso!');
+                modal.style.display = "none";
+                $('#produtoForm')[0].reset();
+            },
+            error: function (xhr, status, error) {
+                alert('Erro ao deletar produto: ' + error);
+            }
+        });
+
+
+    }
+
+
+    function addToCart(itemName, itemPrice, productCod) {
+
+        const existingItem = cartItems.find(item => item.name === itemName);
+
+        itemPrice = Number(parseFloat(itemPrice).toFixed(2));
+
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cartItems.push({ name: itemName, price: itemPrice, quantity: 1, Codigo: productCod });
+        }
+
+        total = parseFloat((total + itemPrice).toFixed(2));
+        updateCartUI();
+    }
+
+    function removeFromCart(itemName) {
+        const itemIndex = cartItems.findIndex(item => item.name === itemName);
+
+        if (itemIndex !== -1) {
+            const item = cartItems[itemIndex];
+            total = parseFloat((total - item.price * item.quantity).toFixed(2));
+            cartItems.splice(itemIndex, 1);
+        }
+
+        updateCartUI();
+    }
+
+    function updateCartUI() {
+        cartItemsList.innerHTML = '';
+
+        cartItems.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`;
+
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'X';
+            removeBtn.style.marginLeft = '10px';
+            removeBtn.addEventListener('click', () => {
+                removeFromCart(item.name);
+            });
+
+            li.appendChild(removeBtn);
+            cartItemsList.appendChild(li);
+        });
+
+        totalPriceElement.textContent = `R$ ${total.toFixed(2)}`;
+    }
+
+    $('#produtoForm').on('submit', function (e) {
+        e.preventDefault();
+        debugger
+        var produtoData = {
+            Codigo: $('#codigo').val(),
+            Nome: $('#nome').val(),
+            Valor: $('#valor').val(),
+            Descricao: $('#descricao').val(),
+            LinkImagem: $('#linkImagem').val()
+        };
+
+        $.ajax({
+            url: '/Produtos/Cadastrar',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(produtoData),
+            success: function (response) {
+                alert('Produto cadastrado com sucesso!');
+                modal.style.display = "none";
+                $('#produtoForm')[0].reset();
+            },
+            error: function (xhr, status, error) {
+                alert('Erro ao cadastrar produto: ' + error);
+            }
+        });
+    });
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var modal = document.getElementById("produtoModal");
+        var btn = document.querySelector(".open-cadastro-prod");
+        var span = document.querySelector(".close");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        const removeProdButtons = document.querySelectorAll('.remove-prod');
+
+
+        removeProdButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const productCard = e.target.closest('.product-card');
+                if (!productCard) return;
+
+                const productCod = productCard.querySelector('p').textContent;
+
+                RemoveItem(productCod);
+
+                productCard.remove();
+            });
+        });
+    });
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const productCard = e.target.closest('.product-card');
+            const productName = productCard.querySelector('h2').textContent;
+            const productPrice = parseFloat(productCard.querySelector('h4 b').textContent.replace('R$', '').trim());
+            const productCod = productCard.querySelector('p').textContent;
+
+            addToCart(productName, productPrice, productCod);
+        });
+
+
+    });
+
+    function FinalizarPedidos() {
+        debugger
+
+        const pedido = {
+            CodigoPedido: 0,
+            ValorTotal: total,
+            Itens: cartItems.map(item => ({
+                CodigoPedido: 0,
+                NomeProduto: item.name,
+                CodigoProduto: item.Codigo,
+                Quantidade: item.quantity,
+                ValorUnitario: item.price
+            }))
+        };
+
+        $.ajax({
+            url: '/Pedidos/CadastrarPedidos',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(pedido),
+            success: function (response) {
+                toastr.success('Pedido cadastrado com sucesso!');
+                cartItems = [];
+                updateCartUI();
+            },
+            error: function (xhr, status, error) {
+                toastr.error('Erro ao finalizar pedido: ' + error);
+            }
+        });
+    }
+
+</script>

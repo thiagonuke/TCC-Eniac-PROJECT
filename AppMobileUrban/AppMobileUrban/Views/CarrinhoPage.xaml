@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobileUrban.Views.CarrinhoPage"
+             xmlns:vm="clr-namespace:AppMobileUrban.ViewModels"
+             Title="Carrinho de Compras"
+             BackgroundColor="LightGray">
+
+    <ContentPage.BindingContext>
+        <vm:ItemsViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20" Spacing="10">
+        <Label Text="Itens no Carrinho" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <CollectionView ItemsSource="{Binding Carrinho}" Margin="0,10,0,0">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="FillAndExpand">
+                        <Image Source="{Binding LinkImagem}" HeightRequest="50" WidthRequest="50" Aspect="AspectFit" />
+                        <StackLayout Orientation="Vertical" Padding="10,0">
+                            <Label Text="{Binding Nome}" FontSize="Medium" TextColor="Black" />
+                            <Label Text="{Binding Valor, StringFormat='Preço: {0:C}'}" FontSize="Small" TextColor="Gray" />
+                        </StackLayout>
+                        <Button Text="X" BackgroundColor="Red" TextColor="White" 
+                                WidthRequest="50"
+                                CornerRadius="50"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.RemoverDoCarrinhoCommand}" 
+                                CommandParameter="{Binding}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Finalizar Compra" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"
+                Command="{Binding FinalizarCompraCommand}" HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+</ContentPage>

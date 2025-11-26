@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="AppMobileUrban.Views.LoginPage"
+             BackgroundColor="White"
+             mc:Ignorable="d"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+
+            <Image Source="logo_urban.jpeg" 
+                   Aspect="AspectFill" />
+
+
+            <Label Text="Zentrix Solutions" 
+                   FontSize="Large" 
+                   TextColor="CornflowerBlue"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20"/>
+
+            <!-- Campo de Email -->
+            <Entry x:Name="emailEntry"
+                   Placeholder="Email" 
+                   Keyboard="Email"
+                   TextColor="CornflowerBlue"
+                   PlaceholderColor="CornflowerBlue"
+                   Margin="0,0,0,10"/>
+
+            <!-- Campo de Senha -->
+            <Entry x:Name="senhaEntry"
+                   Placeholder="Senha"
+                   IsPassword="True"
+                   TextColor="CornflowerBlue"
+                   PlaceholderColor="CornflowerBlue"
+                   Margin="0,0,0,20"/>
+
+
+
+            <Button 
+                VerticalOptions="Center" 
+                Text="Login" 
+                BackgroundColor="Blue"
+                BorderColor="Black"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked"/>
+
+            <Button 
+                VerticalOptions="Center" 
+                Text="Cadastrar" 
+                BackgroundColor="Transparent"
+                TextColor="CornflowerBlue"
+                BorderColor="CornflowerBlue"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="OnRegisterClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:toolkit="http://xamarin.com/schemas/2020/toolkit"
+             mc:Ignorable="d"
+             x:Class="AppMobileUrban.Views.CadastroProdutoPage"
+             BackgroundColor="#313D42">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Cadastro de Produtos" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView HeightRequest="1" BackgroundColor="White" HorizontalOptions="FillAndExpand" />
+
+            <Entry x:Name="CodEntry" Placeholder="Código" TextColor="White" PlaceholderColor="White" Margin="0,10,0,0"/>
+            <Label x:Name="CodError" Text="Campo Código é obrigatório." TextColor="Red" IsVisible="False"/>
+
+            <Entry x:Name="NomeEntry" Placeholder="Nome" TextColor="White" PlaceholderColor="White" Margin="0,10,0,0"/>
+            <Label x:Name="NomeError" Text="Campo Nome é obrigatório." TextColor="Red" IsVisible="False"/>
+
+            <Entry x:Name="ValorEntry" Placeholder="Valor" TextColor="White" PlaceholderColor="White" Margin="0,10,0,0"/>
+            <Label x:Name="ValorError" Text="Campo Valor é obrigatório." TextColor="Red" IsVisible="False"/>
+
+            <Entry x:Name="DescriEntry" Placeholder="Descrição" TextColor="White" PlaceholderColor="White" Margin="0,10,0,0"/>
+            <Label x:Name="DescriError" Text="Campo Descrição é obrigatório." TextColor="Red" IsVisible="False"/>
+
+            <Entry x:Name="LinkEntry" Placeholder="Link da Imagem" TextColor="White" PlaceholderColor="White" Margin="0,10,0,0"/>
+            <Label x:Name="LinkError" Text="Campo Link da Imagem é obrigatório." TextColor="Red" IsVisible="False"/>
+
+            <Label x:Name="ErrorLabel" TextColor="Red" IsVisible="False"/>
+
+            <Button Text="Cadastrar" BackgroundColor="Transparent" CornerRadius="50" BorderColor="Green" BorderWidth="1.5" TextColor="White" Clicked="OnRegisterProdSubmitClicked"/>
+            <Button Text="Cancelar" BackgroundColor="Transparent" CornerRadius="50" BorderColor="Red" BorderWidth="1.5" TextColor="White" Clicked="OnCancelClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobileUrban.Views.FornecedorPage"
+             xmlns:vm="clr-namespace:AppMobileUrban.ViewModels"
+             BackgroundColor="Green">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+
+                <!-- Título do formulário -->
+                <Label Text="Cadastro de Fornecedor"
+                       TextColor="White"
+                       FontSize="Large"
+                       HorizontalOptions="Center" />
+                <BoxView HeightRequest="1" BackgroundColor="White" HorizontalOptions="FillAndExpand" />
+
+                <!-- Campo Código -->
+                <Label Text="Código" FontAttributes="Bold" TextColor="White" />
+                <Entry Placeholder="Digite o Código"
+                       TextColor="White"
+                       PlaceholderColor="white"
+                       Keyboard="Text"
+                       x:Name="CodigoEntry" />
+
+                <!-- Switch para alternar entre PJ e PF -->
+                <Label Text="Pessoa Jurídica" FontAttributes="Bold" TextColor="White" />
+                <Switch x:Name="PessoaSwitch" Toggled="OnPessoaSwitchToggled" />
+
+                <!-- Campo CNPJ -->
+                <Label Text="CNPJ/CPF" FontAttributes="Bold" TextColor="White" IsVisible="True" x:Name="CnpjLabel" />
+                <Entry Placeholder="Digite o CNPJ"
+                       TextColor="White"
+                       PlaceholderColor="white"
+                       Keyboard="Numeric"
+                       x:Name="CnpjEntry" IsVisible="True" />
+
+                <!-- Campo CPF -->
+                <Label Text="CPF" FontAttributes="Bold" TextColor="White" IsVisible="False" x:Name="CpfLabel" />
+                <Entry Placeholder="Digite o CPF"
+                       TextColor="White"
+                       PlaceholderColor="white"
+                       Keyboard="Numeric"
+                       x:Name="CpfEntry" IsVisible="False" />
+
+                <!-- Demais campos -->
+                <Label Text="Razão Social" FontAttributes="Bold" TextColor="White" />
+                <Entry Placeholder="Digite a Razão Social"
+                       TextColor="White"
+                       PlaceholderColor="white"
+                       x:Name="RazaoSocialEntry" />
+
+                <Label Text="Nome Fantasia" FontAttributes="Bold" TextColor="White" />
+                <Entry Placeholder="Digite o Nome Fantasia"
+                       TextColor="White"
+                       PlaceholderColor="white"
+                       x:Name="NomeFantasiaEntry" />
+
+                <Label Text="Enquadramento Estadual" FontAttributes="Bold" TextColor="White" />
+                <Entry Placeholder="Digite o Enquadramento Estadual"
+                       TextColor="White"
+                       PlaceholderColor="white"
+                       x:Name="EnquadramentoEntry" />
+
+                <Label Text="Email" FontAttributes="Bold" TextColor="White" />
+                <Entry Placeholder="Digite o Email"
+                       TextColor="White"
+                       PlaceholderColor="white"
+                       Keyboard="Email"
+                       x:Name="EmailEntry" />
+
+                <Label Text="País de Origem" FontAttributes="Bold" TextColor="White" />
+                <Entry Placeholder="Digite o País de Origem"
+                       TextColor="White"
+                       PlaceholderColor="white"
+                       x:Name="PaisOrigemEntry" />
+
+                <!-- Botão para cadastrar -->
+                <Button Text="Cadastrar"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HorizontalOptions="Center"
+                        Clicked="OnCadastrarClicked" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
