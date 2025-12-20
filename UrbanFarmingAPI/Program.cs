@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using UrbanFarming.Data.Context;
+using Microsoft.Extensions.Hosting;
 using ProjetoModeloApi.IoC;
+using System.Net.Mail;
+using UrbanFarming.Data.Context;
+using UrbanFarming.Domain.Classes;
 using UrbanFarming.Domain.Interfaces.Services;
 using UrbanFarming.Service.AppService;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -41,7 +43,10 @@ builder.Services.AddSwaggerGen(c =>
         Description = "API do sistema ERP Zentrix",
     });
 });
+builder.Services.Configure<EmailSettings>(
+    builder.Configuration.GetSection("EmailSettings"));
 
+builder.Services.AddTransient<EmailService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

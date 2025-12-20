@@ -1,4 +1,5 @@
-﻿using AppMobileUrban.Services;
+﻿using AppMobileUrban.Models;
+using AppMobileUrban.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace AppMobileUrban.Views
         {
             _request = requests;
             InitializeComponent();
+            CarregarFornecedores();
         }
 
         private async void OnRegisterProdSubmitClicked(object sender, EventArgs e)
@@ -74,6 +76,19 @@ namespace AppMobileUrban.Views
                 LinkError.IsVisible = false;
             }
 
+            var fornecedorSelecionado = (Fornecedores)FornecedorPicker.SelectedItem;
+
+
+            if (string.IsNullOrWhiteSpace(fornecedorSelecionado.Codigo.ToString()))
+            {
+                LinkError.IsVisible = true;
+                isValid = false;
+            }
+            else
+            {
+                LinkError.IsVisible = false;
+            }
+
             if (!isValid)
             {
                 ErrorLabel.Text = "Por favor, preencha todos os campos obrigatórios.";
@@ -91,7 +106,9 @@ namespace AppMobileUrban.Views
                     Nome = NomeEntry.Text,
                     Valor = Convert.ToDecimal(ValorEntry.Text),
                     Descricao = DescriEntry.Text,
-                    LinkImagem = LinkEntry.Text
+                    LinkImagem = LinkEntry.Text,
+                    Fornecedor = fornecedorSelecionado.Codigo
+
                 });
 
                 await DisplayAlert("Sucesso", "Produto cadastrado com sucesso!", "OK");
@@ -108,7 +125,20 @@ namespace AppMobileUrban.Views
             } 
 
         }
+        private async void CarregarFornecedores()
+        {
+            try
+            {
+                var response = await _request.RetornaFornecedores();
 
+                FornecedorPicker.ItemsSource = response;
+                FornecedorPicker.ItemDisplayBinding = new Binding("RazaoSocial");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Erro", ex.Message, "OK");
+            }
+        }
         private async void OnCancelClicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();

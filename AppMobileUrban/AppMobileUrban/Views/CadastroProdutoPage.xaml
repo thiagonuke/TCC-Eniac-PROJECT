@@ -5,12 +5,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:toolkit="http://xamarin.com/schemas/2020/toolkit"
              mc:Ignorable="d"
-             x:Class="AppMobileUrban.Views.CadastroProdutoPage"
-             BackgroundColor="#313D42">
+             x:Class="AppMobileUrban.Views.CadastroProdutoPage">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#4a90e2" Offset="0.0" />
+            <GradientStop Color="#1c3d70" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout Padding="10">
             <Label Text="Cadastro de Produtos" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
             <BoxView HeightRequest="1" BackgroundColor="White" HorizontalOptions="FillAndExpand" />
+
+            <Picker x:Name="FornecedorPicker"
+                    Title="Selecione o Fornecedor"
+                    TitleColor="White"
+                    TextColor="White"
+                    Margin="0,10,0,0"/>
+            <Label x:Name="FornecedorError" Text="Campo Fornecedor é obrigatório." TextColor="Red" IsVisible="False"/>
 
             <Entry x:Name="CodEntry" Placeholder="Código" TextColor="White" PlaceholderColor="White" Margin="0,10,0,0"/>
             <Label x:Name="CodError" Text="Campo Código é obrigatório." TextColor="Red" IsVisible="False"/>

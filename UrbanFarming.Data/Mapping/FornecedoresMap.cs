@@ -8,7 +8,7 @@ namespace UrbanFarming.Data.Mapping
         public static void Map(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Fornecedores>()
-                .ToTable("Fornecedor");
+                .ToTable("Fornecedores");
 
             modelBuilder.Entity<Fornecedores>()
                 .HasKey(p => p.Codigo);
@@ -48,18 +48,6 @@ namespace UrbanFarming.Data.Mapping
                 .HasColumnName("Email")
                 .IsRequired()
                 .HasMaxLength(255);
-
-            modelBuilder.Entity<Fornecedores>()
-                .Property(x => x.EnquadramentoEstadual)
-                .HasColumnName("EnquadramentoEstadual")
-                .IsRequired()
-                .HasMaxLength(100);
-
-            modelBuilder.Entity<Fornecedores>()
-                .Property(x => x.RamoAtividade)
-                .HasColumnName("RamoAtividade")
-                .IsRequired()
-                .HasMaxLength(100);
 
             modelBuilder.Entity<Fornecedores>()
                 .Property(x => x.PessoaJuridica)

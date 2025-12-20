@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "Novo Perfil",
+    "Projects": [
+      {
+        "Path": "..\\UrbanFarmingAPI\\UrbanFarmingAPI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\AppMobileUrban\\AppMobileUrban.Android\\AppMobileUrban.Android.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "UrbanFarmingWeb.UI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

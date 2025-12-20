@@ -10,12 +10,13 @@ namespace UrbanFarming.Domain.Classes
         public decimal ValorTotal { get; set; }
         public string Usuario { get; set; }
         public DateTime Data { get; set; }
+        public int IdFornecedor { get; set; }
         [NotMapped]
         public List<ItensPedido> Itens { get; set; }
 
         public Pedido() { 
         
-        Itens = new List<ItensPedido>(); 
+            Itens = new List<ItensPedido>(); 
         }
     }
 }

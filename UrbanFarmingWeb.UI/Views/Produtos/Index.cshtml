@@ -1,192 +1,289 @@
 ﻿@model List<UrbanFarming.Domain.Classes.Produtos>
 
 <style>
-
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #4a90e2, #1c3d70);
+        margin: 0;
+        color: #fff;
     }
 
-    header {
-        text-align: center;
-        margin-bottom: 20px;
+    h1, h2 {
+        font-weight: 400;
     }
 
-    h1 {
-        color: #333;
-    }
-
-    .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* BOTÕES DO TOPO */
+    .top-actions {
+        display: flex;
+        justify-content: flex-end;
         gap: 20px;
     }
 
-    .product-card {
-        background-color: white;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 15px;
-        }
-
-        .product-card h2 {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .product-card p {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-    button {
-        padding: 10px 15px;
-        background-color: #28a745;
-        color: white;
+    .open-cart-btn, .open-cadastro-prod {
+        background: rgba(255, 255, 255, 0.25);
         border: none;
-        border-radius: 5px;
+        padding: 12px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
         cursor: pointer;
+        transition: 0.3s;
     }
 
+        .open-cart-btn:hover, .open-cadastro-prod:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+        }
+
+    /* GRID DE PRODUTOS */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    /* CARD MODERNO */
+    .product-card {
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(14px);
+        padding: 20px;
+        border-radius: 18px;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+        transition: 0.3s;
+        height: 60vh;
+    }
 
     .product-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
     }
 
-    @@media (max-width: 768px) {
-        .product-grid {
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        }
-
-        .product-card {
-            padding: 10px;
-        }
-    }
-
-    @@media (max-width: 480px) {
-        .product-grid {
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        }
-
-        h1 {
-            font-size: 1.5rem;
-        }
-    }
-
-    .open-cart-btn {
-        padding: 10px 20px;
-        background-color: whitesmoke;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .cart {
-        width: 300px;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        position: fixed;
-        top: 0;
-        right: -350px;
-        height: 100vh;
-        transition: right 0.4s ease;
-    }
-
-        .cart.open {
-            right: 0;
-        }
-
-    .cart-items {
-        list-style: none;
-        padding: 0;
-    }
-
-        .cart-items li {
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-    .total-price {
-        font-weight: bold;
-        font-size: 1.2em;
-    }
-
-    .checkout-btn {
-        margin-top: 20px;
-        padding: 10px;
+    .product-card img {
         width: 100%;
-        background-color: #28a745;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+        height: 150px;
+        border-radius: 12px;
+        object-fit: cover;
+        margin-bottom: 15px;
     }
 
-    .close-cart-btn {
-        background-color: red;
-        color: white;
+    .product-card button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        width: 100%;
+        border-radius: 10px;
         border: none;
+        cursor: pointer;
+        background: #28a745;
+        color: white;
+        font-weight: 600;
+        transition: 0.25s;
+    }
+
+    .product-card button:hover {
+        background: #1f8a39;
+        transform: translateY(-2px);
+    }
+
+    /* ÍCONE DE EXCLUIR (ADMIN) */
+    .remove-prod {
+        background: #ff4d4d;
+        color: white;
+        padding: 3px 10px;
         border-radius: 50%;
-        padding: 5px;
+        cursor: pointer;
+        font-size: 18px;
         position: absolute;
         top: 10px;
         right: 10px;
+    }
+
+    .product-card .remove-prod:hover {
+        background: #d93636;
+    }
+
+    /* CARRINHO MODERNO */
+    .cart {
+        width: 350px;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(25px);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+        border-radius: 0 0 0 20px;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        height: 100vh;
+        transition: 0.4s ease;
+        color: white;
+    }
+
+    .cart.open {
+        right: 0;
+    }
+
+    .close-cart-btn {
+        background: #d9534f;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        border-radius: 50%;
         cursor: pointer;
     }
 
+    /* LISTA ITENS */
+    .cart-items {
+        margin-top: 20px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .cart-items li {
+        background: rgba(255,255,255,0.15);
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        backdrop-filter: blur(6px);
+    }
+
+    .checkout-btn {
+        background: #28a745;
+        color: #fff;
+        padding: 12px;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 20px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+
+        .checkout-btn:hover {
+            background: #1f7a33;
+            transform: translateY(-2px);
+        }
+
+    /* MODAL MODERNO */
     .modal {
         display: none;
         position: fixed;
-        z-index: 1;
+        z-index: 4;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: blur(6px);
     }
 
     .modal-content {
-        background-color: #fefefe;
-        margin: 4% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(12px);
+        padding: 30px;
+        border-radius: 20px;
+        width: 85%;
         max-width: 500px;
+        margin: 5% auto;
+        color: white;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .modal-content input,
+    .modal-content textarea {
+        margin-bottom: 10px;
+        background: white !important;
+    }
+
+    .modal-content button {
+        background: #1c3d70;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+        color: white;
+        font-weight: bold;
+        margin-top: 12px;
     }
 
     .close {
-        color: #aaa;
-        float: right;
+        cursor: pointer;
         font-size: 28px;
-        font-weight: bold;
     }
 
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
+    @@media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
         }
+    }
 
+    .cart-item-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .remove-cart-btn {
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        background-color: #dc3545;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s ease;
+    }
+
+    .remove-cart-btn:hover {
+        background-color: #bd2130;
+        transform: scale(1.1);
+    }
+
+    .remove-cart-btn img {
+        width: 16px;
+        height: 16px;
+        filter: brightness(0) invert(1);
+    }
+
+    .remove-product-btn {
+        position: absolute;
+        width: 5vw !important;
+        height: 34px;
+        border: none;
+        border-radius: 50%;
+        background-color: #dc3545;
+        cursor: pointer;
+        justify-content: end;
+        align-items: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+        transition: 0.2s ease;
+        z-index: 10;
+    }
+
+    .remove-product-btn:hover {
+        background-color: #b71c1c;
+        transform: scale(1.1);
+    }
+
+    .remove-product-btn img {
+        width: 18px;
+        height: 18px;
+        filter: brightness(0) invert(1);
+    }
 </style>
 
 <!doctype html>
 <html lang="en">
-<body style="background-color: seagreen;">
-    <div class="col-md-12 d-flex justify-content-end">
+<body style="background-color: steelblue;">
+    <div class="col-md-12 d-flex justify-content-end mt-4">
         <button class="open-cart-btn">
             <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/shopping-cart--v1.png" alt="shopping-cart--v1" />
         </button>
@@ -198,15 +295,17 @@
         }
     </div>
 
-    <section class="product-grid mt-4">
+    <section class="product-grid mt-1">
         @foreach (var prod in Model)
         {
 
             <div class="product-card d-flex flex-column justify-content-around shadow-lg">
                 @if (ViewBag.Adm == true)
                 {
-                    <div class="col-md-2 rounded-circle bg-danger d-flex justify-content-center align-items-center">
-                        <span class="remove-prod close">&times;</span>
+                    <div class="row justify-content-end mb-5">
+                        <button class="remove-product-btn" style="background-color: red !important;" id="removeprod">
+                            <img src="https://img.icons8.com/ios-glyphs/20/ffffff/trash.png" />
+                        </button>
                     </div>
 
                 }
@@ -238,19 +337,24 @@
             </div>
             <hr />
             <form id="produtoForm" class="d-flex flex-column align-items-center text-white">
-                <label style="color:black;" for="codigo">Código:</label>
+                <label style="color:white;" for="idFornecedor">Vincular Fornecedor:</label>
+                <select id="idFornecedor" class="rounded-3 border border w-75 p-1 text-black"
+                        style="background-color:white" required>
+                    <option value="">Selecione...</option>
+                </select>
+                <label style="color:white;" class="mt-3" for="codigo">Código:</label>
                 <input type="text" id="codigo" class="rounded-3 border border w-75 p-1 text-black" style="background-color:white" placeholder="codigo" required>
 
-                <label style="color:black;" class="mt-3" for="nome">Nome:</label>
+                <label style="color:white;" class="mt-3" for="nome">Nome:</label>
                 <input type="text" id="nome" class="rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="nome" required>
 
-                <label style="color:black;" class="mt-3" for="valor">Valor:</label>
+                <label style="color:white;" class="mt-3" for="valor">Valor:</label>
                 <input type="number" step="0.01" id="valor" class="rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="valor" required>
 
-                <label style="color:black;" class="mt-3" for="descricao">Descrição:</label>
+                <label style="color:white;" class="mt-3" for="descricao">Descrição:</label>
                 <textarea id="descricao" class="rounded-3 border w-75 p-1 text-black" name="descricao"></textarea>
 
-                <label style="color:black;" class="mt-3" for="linkImagem">Link da Imagem:</label>
+                <label style="color:white;" class="mt-3" for="linkImagem">Link da Imagem:</label>
                 <input type="text" id="linkImagem" class="rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="linkImagem" required>
 
                 <button class="w-100 mt-3" type="submit">Cadastrar</button>
@@ -269,10 +373,8 @@
     const cart = document.querySelector('.cart');
     const openCartBtn = document.querySelector('.open-cart-btn');
     const closeCartBtn = document.querySelector('.close-cart-btn');
-
     const checkoutbtn = document.querySelector('#checkout-btn');
-    debugger
-    const removeprod = document.querySelector('#removeprod');
+    const removeprod = document.querySelector('.remove-product-btn');
     const cartItemsList = document.querySelector('.cart-items');
     const totalPriceElement = document.querySelector('.total-price');
     const addToCartButtons = document.querySelectorAll('.product-card button');
@@ -306,10 +408,7 @@
 
         });
 
-    } catch (ex) { 
-        debugger
-
-        var teste = ""
+    } catch (ex) {
     }
 
     function RemoveItem(productCod) {
@@ -366,11 +465,13 @@
 
         cartItems.forEach(item => {
             const li = document.createElement('li');
+            li.classList.add('cart-item-row')
             li.textContent = `${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`;
 
             const removeBtn = document.createElement('button');
-            removeBtn.textContent = 'X';
-            removeBtn.style.marginLeft = '10px';
+            removeBtn.classList.add('remove-cart-btn');
+            removeBtn.innerHTML = '<img src="https://img.icons8.com/ios-glyphs/20/ffffff/trash.png"/>';
+
             removeBtn.addEventListener('click', () => {
                 removeFromCart(item.name);
             });
@@ -390,7 +491,8 @@
             Nome: $('#nome').val(),
             Valor: $('#valor').val(),
             Descricao: $('#descricao').val(),
-            LinkImagem: $('#linkImagem').val()
+            LinkImagem: $('#linkImagem').val(),
+            Fornecedor: $('#idFornecedor').val()
         };
 
         $.ajax({
@@ -444,8 +546,34 @@
                 RemoveItem(productCod);
 
                 productCard.remove();
+
+                location.reload();
             });
         });
+
+        const fornecedorSelect = document.getElementById("idFornecedor");
+        debugger
+        $.ajax({
+                url: "/Fornecedor/GetAllFornecedores",
+                method: "GET",
+                dataType: "json",
+                success: function (data) {
+                    const fornecedorSelect = $("#idFornecedor");
+
+                    data.forEach(f => {
+                        fornecedorSelect.append(
+                            $("<option>", {
+                                value: f.codigo,
+                                text: f.razaoSocial
+                            })
+                        );
+                    });
+                },
+                error: function (err) {
+                    console.error("Erro ao carregar fornecedores:", err);
+                }
+            });
+
     });
 
     addToCartButtons.forEach(button => {

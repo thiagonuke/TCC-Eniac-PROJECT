@@ -26,7 +26,7 @@ namespace UrbanFarming.Service.AppService
             return fornecedor;
         }
 
-        public async Task<List<Fornecedores>> GetAllFornecedores()
+        public async Task<List<Fornecedores>?> GetAllFornecedores()
         {
             return await _fornecedoresRepository.GetAllFornecedores();
         }

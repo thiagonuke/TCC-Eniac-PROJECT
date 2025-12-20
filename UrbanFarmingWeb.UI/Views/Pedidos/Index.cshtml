@@ -1,111 +1,200 @@
 ﻿@model List<UrbanFarming.Domain.Classes.Pedido>
-<style>
-    body {
-        background-color: seagreen;
-        font-family: Arial, sans-serif;
-    }
 
-    .containerped {
-        max-width: 800px;
-        margin: auto;
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-
-    th, td {
-        padding: 10px;
-        border: 1px solid #ccc;
-        text-align: left;
-    }
-
-    th {
-        background-color: #f4f4f4;
-    }
-
-    .items {
-        display: none; 
-        margin: 10px 0 0 0;
-        transition: max-height 0.3s ease;
-    }
-
-    .show {
-        display: block; 
-    }
-
-    .toggle-button {
-        cursor: pointer;
-        color: #007bff;
-        text-decoration: underline;
-        margin-top: 10px;
-        display: inline-block;
-    }
-</style>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tabulator CSS -->
+    <link href="https://unpkg.com/tabulator-tables@5.5.1/dist/css/tabulator.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: steelblue;
+            font-family: Arial, sans-serif;
+        }
+
+        .containerped {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .tabulator {
+            background: #ffffff !important;
+            border: 1px solid #e0e0e0 !important;
+            color: #333 !important;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Cabeçalho */
+        .tabulator-header {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #e0e0e0 !important;
+        }
+
+        .tabulator-col {
+            background: #ffffff !important;
+            color: #333;
+            border-right: 1px solid #e0e0e0 !important;
+        }
+
+        .tabulator-col-content {
+            padding: 10px;
+        }
+
+        /* Linhas */
+        .tabulator-row {
+            background: #ffffff !important;
+            border-bottom: 1px solid #f0f0f0 !important;
+        }
+
+            /* Hover */
+            .tabulator-row:hover {
+                background: #f9f9f9 !important;
+            }
+
+        /* Células */
+        .tabulator-cell {
+            padding: 10px !important;
+            color: #333 !important;
+            border-right: 1px solid #f0f0f0 !important;
+        }
+
+        /* Botão Mostrar Itens */
+        .btn-itens {
+            background: #ffffff;
+            padding: 6px 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            color: #007bff;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+            .btn-itens:hover {
+                background: #007bff;
+                color: #fff;
+            }
+
+        /* Tabela interna */
+        .itens-grid .tabulator {
+            background: #ffffff !important;
+            border: 1px solid #e0e0e0 !important;
+        }
+
+        .itens-grid .tabulator-row {
+            background: #ffffff !important;
+        }
+
+        .itens-grid .tabulator-row:hover {
+            background: #f0f0f0 !important;
+        }
+    </style>
 </head>
+
 <body>
     <div class="containerped mt-4">
         <h1>Pedidos Feitos</h1>
         <hr />
-        <table>
-            <thead>
-                <tr>
-                    <th>Código do Pedido</th>
-                    <th>Valor Total</th>
-                    <th>Usuário</th>
-                    <th>Data</th>
-                    <th>Itens</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var pedido in Model)
-                {
-                    <tr>
-                        <td>@pedido.CodigoPedido</td>
-                        <td>@pedido.ValorTotal.ToString("C")</td>
-                        <td>@pedido.Usuario</td>
-                        <td>@pedido.Data.ToShortDateString()</td>
-                        <td>
-                            <div class="toggle-button" onclick="toggleItems(this)">Mostrar Itens</div>
-                            <ul class="items">
-                                @foreach (var item in pedido.Itens)
-                                {
-                                    <li>@item.NomeProduto - Código: @item.CodigoProduto, Quantidade: @item.Quantidade, Valor Unitário: @item.ValorUnitario.ToString("C")</li>
-                                }
-                            </ul>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+
+        <div id="tabelaPedidos" class="h-75"></div>
     </div>
 
+    <!-- Tabulator JS -->
+    <script src="https://unpkg.com/tabulator-tables@5.5.1/dist/js/tabulator.min.js"></script>
+
     <script>
-        function toggleItems(button) {
-            const itemsList = button.nextElementSibling;
-            if (itemsList.classList.contains('show')) {
-                itemsList.classList.remove('show');
-                button.innerText = 'Mostrar Itens';
-            } else {
-                itemsList.classList.add('show');
-                button.innerText = 'Ocultar Itens';
-            }
+        // Converte o objeto do Model Razor em JSON
+        const pedidos = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model));
+
+        // Formatação para tabela interna (itens do pedido)
+        function buildItensTable(cell, formatterParams) {
+            const rowData = cell.getRow().getData();
+            const itens = rowData.Itens;
+
+            let html = `
+                <div style="padding:10px;">
+                    <strong>Itens do Pedido:</strong>
+                    <div class="itens-grid"></div>
+                </div>
+            `;
+
+            const container = document.createElement("div");
+            container.innerHTML = html;
+
+            // Cria tabela interna
+            new Tabulator(container.querySelector(".itens-grid"), {
+                theme: "no-theme",
+                layout: "fitColumns",
+                data: itens,
+                columns: [
+                    { title: "Produto", field: "NomeProduto" },
+                    { title: "Código", field: "CodigoProduto" },
+                    { title: "Quantidade", field: "Quantidade" },
+                    { title: "Valor Unitário", field: "ValorUnitario", formatter: "money", formatterParams: { symbol: "R$ " } }
+                ]
+            });
+
+            return container;
         }
+
+        // Tabela principal
+        const table = new Tabulator("#tabelaPedidos", {
+            theme: "no-theme",
+            data: pedidos,
+            layout: "fitColumns",
+
+            columns: [
+                { title: "Código do Pedido", field: "CodigoPedido", width: 150 },
+                {
+                    title: "Valor Total",
+                    field: "ValorTotal",
+                    formatter: "money",
+                    formatterParams: { symbol: "R$ " }
+                },
+                { title: "Usuário", field: "Usuario" },
+                {
+                    title: "Data",
+                    field: "Data",
+                    formatter: function (cell) {
+                        let d = new Date(cell.getValue());
+                        return d.toLocaleDateString();
+                    }
+                },
+                {
+                    title: "Itens",
+                    formatter: function () {
+                        return `<button class="btn-itens">Mostrar Itens</button>`;
+                    },
+                    width: 130,
+                    cellClick: function (e, cell) {
+                        const row = cell.getRow();
+
+                        if (row.getElement().classList.contains("tab-expanded")) {
+                            row.getElement().classList.remove("tab-expanded");
+                            row.getElement().nextElementSibling?.remove();
+                        } else {
+                            row.getElement().classList.add("tab-expanded");
+
+                            const detalhes = buildItensTable(cell);
+
+                            // Insere abaixo da linha atual
+                            row.getElement().insertAdjacentElement("afterend", detalhes);
+                        }
+                    }
+                }
+            ]
+        });
     </script>
+
 </body>
 </html>

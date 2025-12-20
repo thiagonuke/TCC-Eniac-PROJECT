@@ -2,21 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMobileUrban.Views.FornecedorPage"
-             xmlns:vm="clr-namespace:AppMobileUrban.ViewModels"
-             BackgroundColor="Green">
+             xmlns:vm="clr-namespace:AppMobileUrban.ViewModels">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#4a90e2" Offset="0.0" />
+            <GradientStop Color="#1c3d70" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20">
 
-                <!-- Título do formulário -->
                 <Label Text="Cadastro de Fornecedor"
                        TextColor="White"
                        FontSize="Large"
                        HorizontalOptions="Center" />
                 <BoxView HeightRequest="1" BackgroundColor="White" HorizontalOptions="FillAndExpand" />
 
-                <!-- Campo Código -->
                 <Label Text="Código" FontAttributes="Bold" TextColor="White" />
                 <Entry Placeholder="Digite o Código"
                        TextColor="White"
@@ -24,11 +28,9 @@
                        Keyboard="Text"
                        x:Name="CodigoEntry" />
 
-                <!-- Switch para alternar entre PJ e PF -->
                 <Label Text="Pessoa Jurídica" FontAttributes="Bold" TextColor="White" />
                 <Switch x:Name="PessoaSwitch" Toggled="OnPessoaSwitchToggled" />
 
-                <!-- Campo CNPJ -->
                 <Label Text="CNPJ/CPF" FontAttributes="Bold" TextColor="White" IsVisible="True" x:Name="CnpjLabel" />
                 <Entry Placeholder="Digite o CNPJ"
                        TextColor="White"
@@ -36,7 +38,6 @@
                        Keyboard="Numeric"
                        x:Name="CnpjEntry" IsVisible="True" />
 
-                <!-- Campo CPF -->
                 <Label Text="CPF" FontAttributes="Bold" TextColor="White" IsVisible="False" x:Name="CpfLabel" />
                 <Entry Placeholder="Digite o CPF"
                        TextColor="White"
@@ -44,7 +45,6 @@
                        Keyboard="Numeric"
                        x:Name="CpfEntry" IsVisible="False" />
 
-                <!-- Demais campos -->
                 <Label Text="Razão Social" FontAttributes="Bold" TextColor="White" />
                 <Entry Placeholder="Digite a Razão Social"
                        TextColor="White"
@@ -56,12 +56,6 @@
                        TextColor="White"
                        PlaceholderColor="white"
                        x:Name="NomeFantasiaEntry" />
-
-                <Label Text="Enquadramento Estadual" FontAttributes="Bold" TextColor="White" />
-                <Entry Placeholder="Digite o Enquadramento Estadual"
-                       TextColor="White"
-                       PlaceholderColor="white"
-                       x:Name="EnquadramentoEntry" />
 
                 <Label Text="Email" FontAttributes="Bold" TextColor="White" />
                 <Entry Placeholder="Digite o Email"
@@ -76,7 +70,27 @@
                        PlaceholderColor="white"
                        x:Name="PaisOrigemEntry" />
 
-                <!-- Botão para cadastrar -->
+                <!-- Mensagem Padrão de E-mail -->
+                <Label Text="Mensagem Padrão de E-mail"
+                       FontAttributes="Bold"
+                       TextColor="White" />
+
+                <Editor x:Name="MensagemPadraoEntry"
+                    Text="Olá, um pedido foi realizado pelo sistema Zentrix para a quantidade {quantidade} do produto {produto}."
+                    Placeholder="Digite a mensagem padrão..."
+                    TextColor="White"
+                    PlaceholderColor="White"
+                    AutoSize="TextChanges"
+                    HeightRequest="120"
+                    BackgroundColor="#1c3d70"
+                    Margin="0,5,0,0" />
+
+                <Label Text="Digite aqui a mensagem padrão para envio automático. Você pode usar placeholders como {produto}, {quantidade}, {data}, {codigoPedido}..."
+                       TextColor="Red"
+                       FontSize="Small"
+                       HorizontalOptions="Start"
+                       Margin="0,2,0,15" />
+
                 <Button Text="Cadastrar"
                         BackgroundColor="Black"
                         TextColor="White"

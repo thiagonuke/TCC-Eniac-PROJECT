@@ -2,9 +2,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMobileUrban.Views.AboutPage"
              xmlns:vm="clr-namespace:AppMobileUrban.ViewModels"
-             BackgroundColor="Green"
              Title="{Binding Title}">
-
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#4a90e2" Offset="0.0" />
+            <GradientStop Color="#1c3d70" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>

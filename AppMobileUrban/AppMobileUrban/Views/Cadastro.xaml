@@ -3,8 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             x:Class="AppMobileUrban.Views.Cadastro"
-             BackgroundColor="#313D42">
+             x:Class="AppMobileUrban.Views.Cadastro">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#4a90e2" Offset="0.0" />
+            <GradientStop Color="#1c3d70" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout Padding="10">
             <Label Text="Cadastro" FontSize="Large" HorizontalOptions="Center" TextColor="white"/>

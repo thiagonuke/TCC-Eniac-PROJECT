@@ -3,9 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppMobileUrban.Models" 
              xmlns:viewmodels="clr-namespace:AppMobileUrban.ViewModels" 
-             x:Class="AppMobileUrban.Views.PedidosPage"
-             BackgroundColor="Green">
-
+             x:Class="AppMobileUrban.Views.PedidosPage">
+    
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#4a90e2" Offset="0.0" />
+            <GradientStop Color="#1c3d70" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
     <!-- Definindo o contexto de dados -->
     <ContentPage.BindingContext>
         <viewmodels:PedidosViewModel />

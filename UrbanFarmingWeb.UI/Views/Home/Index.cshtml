@@ -132,9 +132,9 @@
 				<label for="email">Email:</label>
 				<input type="email" id="email" class="rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="Email" required>
 				<label for="password">Senha:</label>
-				<input type="password" id="password-field" class="firstPassword rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="Senha" required>
+				<input type="password" id="passwordCadastrof" class="firstPassword rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="Senha" required>
 				<label for="confirmPassword">Confirmar Senha:</label>
-				<input type="password" id="password-field" class="confirmPassword rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="Senha" required> <br />
+				<input type="password" id="passwordCadastro" class="confirmPassword rounded-3 border w-75 p-1 text-black" style="background-color:white" placeholder="Senha" required> <br />
 				<button type="button" id="btncadastro" class="btn btn-outline-light rounded-3">Cadastrar</button>
 			</form>
 		</div>
@@ -152,30 +152,34 @@
 <script>
 
 
-	$("#Login").on("click", function () {
+	$("#Login").on("click", function (e) {
+		e.preventDefault(); // impede submit do form
+
+		showLoading();
 
 		$.ajax({
 			url: './Seguranca/Login',
-			method: "POST", 
+			method: "POST",
 			data: JSON.stringify({
-				Email: $('#usuario').val().toString(),
-				Senha: $('#password-field').val().toString()
+				Email: $('#usuario').val(),
+				Senha: $('#password-field').val()
 			}),
 			contentType: 'application/json; charset=utf-8',
 			success: function (response) {
+				hideLoading();
+
 				if (response.includes("Success")) {
-					window.location.href = "../Home/MenuHome"
-				}else{
-					alert(response)
+					window.location.href = "../Home/MenuHome";
+				} else {
+					alert(response);
 				}
-				
 			},
 			error: function (xhr, status, error) {
-				alert(error)
+				hideLoading();
+				alert(error);
 			}
 		});
 	});
-	
 	$("#btncadastro").on("click", function () {
 
 		if ($('.firstPassword').val().toString() == $('.confirmPassword').val().toString()) {
@@ -189,12 +193,8 @@
 				}),
 				contentType: 'application/json; charset=utf-8',
 				success: function (response) {
-					if (response.includes("Success")) {
-						alert(response)
-					} else {
-						alert(response)
-					}
-
+					toastr.success("Cadastrado com sucesso!")
+					document.getElementById('popup').style.display = 'none';
 				},
 				error: function (xhr, status, error) {
 					alert(error)

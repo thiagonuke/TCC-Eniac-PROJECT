@@ -39,9 +39,9 @@ namespace AppMobileUrban.Views
             {
                 RazaoSocial = RazaoSocialEntry.Text,
                 NomeFantasia = NomeFantasiaEntry.Text,
-                EnquadramentoEstadual = EnquadramentoEntry.Text,
                 Email = EmailEntry.Text,
-                PaisOrigem = PaisOrigemEntry.Text
+                PaisOrigem = PaisOrigemEntry.Text,
+                MensagemPadraoEmail = MensagemPadraoEntry.Text
             };
 
             if (PessoaSwitch.IsToggled)
@@ -55,7 +55,6 @@ namespace AppMobileUrban.Views
                 fornecedor.CNPJ = null;
                 fornecedor.PessoaJuridica = false;
                 fornecedor.PessoaFisica = true;
-                fornecedor.RamoAtividade = CpfEntry.Text;
             }
 
 

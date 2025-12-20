@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using UrbanFarming.Domain.Classes;
 using UrbanFarmingWeb.UI.Request;
 using UrbanFarmingWeb.UI.Util;
@@ -37,6 +38,14 @@ namespace UrbanFarmingWeb.UI.Controllers
 
 
             return Json(response);
+        }
+
+        [HttpGet("GetAllFornecedores")]
+        public async Task<IActionResult> GetAllFornecedores()
+        {
+            var lista = await _request.GetFornecedores();
+
+            return Json(lista);
         }
     }
 }

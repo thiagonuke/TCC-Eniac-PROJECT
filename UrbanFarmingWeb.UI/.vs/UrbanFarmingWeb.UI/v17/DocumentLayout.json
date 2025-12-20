@@ -1,12 +1,882 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\cadastroprodutopage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\cadastro.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\cadastroprodutopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\fornecedorpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\fornecedorpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\models\\fornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\controllers\\fornecedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:controllers\\fornecedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF2B155E-87B1-4B27-93A5-0459715DCB63}|..\\UrbanFarming.Domain\\UrbanFarming.Domain.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.domain\\classes\\fornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\aboutpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\cadastro.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\models\\produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF2B155E-87B1-4B27-93A5-0459715DCB63}|..\\UrbanFarming.Domain\\UrbanFarming.Domain.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.domain\\classes\\produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\services\\requests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\carrinhopage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\loginpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\itemspage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\request\\requestapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:request\\requestapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\pedidospage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\views\\produtos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:views\\produtos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31BB30BC-4D91-4FEA-9A65-E7244E97E780}|..\\AppMobileUrban\\AppMobileUrban\\AppMobileUrban.csproj|c:\\projetos\\tcc-eniac-project\\appmobileurban\\appmobileurban\\views\\newitempage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5652DA5B-4846-403E-B3B0-9591FBF577A6}|..\\UrbanFarming.Service\\UrbanFarming.Service.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.service\\appservice\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CEF75B8-F4E5-48D8-AD79-49BD7D78BBA9}|..\\UrbanFarmingAPI\\UrbanFarmingAPI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5652DA5B-4846-403E-B3B0-9591FBF577A6}|..\\UrbanFarming.Service\\UrbanFarming.Service.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.service\\appservice\\pedidosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CEF75B8-F4E5-48D8-AD79-49BD7D78BBA9}|..\\UrbanFarmingAPI\\UrbanFarmingAPI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingapi\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5652DA5B-4846-403E-B3B0-9591FBF577A6}|..\\UrbanFarming.Service\\UrbanFarming.Service.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.service\\appservice\\fornecedoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CEF75B8-F4E5-48D8-AD79-49BD7D78BBA9}|..\\UrbanFarmingAPI\\UrbanFarmingAPI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CEF75B8-F4E5-48D8-AD79-49BD7D78BBA9}|..\\UrbanFarmingAPI\\UrbanFarmingAPI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingapi\\ioc\\modules\\servicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{531C74E4-B078-47AE-AE18-DBD4CD276E44}|..\\UrbanFarming.Data\\UrbanFarming.Data.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.data\\repositories\\pedidosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CEF75B8-F4E5-48D8-AD79-49BD7D78BBA9}|..\\UrbanFarmingAPI\\UrbanFarmingAPI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingapi\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF2B155E-87B1-4B27-93A5-0459715DCB63}|..\\UrbanFarming.Domain\\UrbanFarming.Domain.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.domain\\classes\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF2B155E-87B1-4B27-93A5-0459715DCB63}|..\\UrbanFarming.Domain\\UrbanFarming.Domain.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.domain\\classes\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C100B482-5FCB-4C9C-88FB-E75FC0383094}|..\\UrbanFarming.Desktop\\UrbanFarming.Desktop.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.desktop\\formfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF2B155E-87B1-4B27-93A5-0459715DCB63}|..\\UrbanFarming.Domain\\UrbanFarming.Domain.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.domain\\interfaces\\services\\ifornecedoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF2B155E-87B1-4B27-93A5-0459715DCB63}|..\\UrbanFarming.Domain\\UrbanFarming.Domain.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.domain\\interfaces\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\views\\fornecedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:views\\fornecedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CEF75B8-F4E5-48D8-AD79-49BD7D78BBA9}|..\\UrbanFarmingAPI\\UrbanFarmingAPI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingapi\\controllers\\fornecedorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{531C74E4-B078-47AE-AE18-DBD4CD276E44}|..\\UrbanFarming.Data\\UrbanFarming.Data.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.data\\repositories\\fornecedoresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{531C74E4-B078-47AE-AE18-DBD4CD276E44}|..\\UrbanFarming.Data\\UrbanFarming.Data.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.data\\mapping\\fornecedoresmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{531C74E4-B078-47AE-AE18-DBD4CD276E44}|..\\UrbanFarming.Data\\UrbanFarming.Data.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.data\\context\\urbancontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF2B155E-87B1-4B27-93A5-0459715DCB63}|..\\UrbanFarming.Domain\\UrbanFarming.Domain.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.domain\\interfaces\\repositories\\ifornecedoresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\views\\pedidos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:views\\pedidos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\wwwroot\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:wwwroot\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{531C74E4-B078-47AE-AE18-DBD4CD276E44}|..\\UrbanFarming.Data\\UrbanFarming.Data.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.data\\mapping\\produtosmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{531C74E4-B078-47AE-AE18-DBD4CD276E44}|..\\UrbanFarming.Data\\UrbanFarming.Data.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.data\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CEF75B8-F4E5-48D8-AD79-49BD7D78BBA9}|..\\UrbanFarmingAPI\\UrbanFarmingAPI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingapi\\controllers\\segurancacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarmingweb.ui\\views\\menu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C226B9F8-8240-4487-90F9-A07EE3A65BFA}|UrbanFarmingWeb.UI.csproj|solutionrelative:views\\menu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{531C74E4-B078-47AE-AE18-DBD4CD276E44}|..\\UrbanFarming.Data\\UrbanFarming.Data.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.data\\repositories\\produtosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5652DA5B-4846-403E-B3B0-9591FBF577A6}|..\\UrbanFarming.Service\\UrbanFarming.Service.csproj|c:\\projetos\\tcc-eniac-project\\urbanfarming.service\\appservice\\produtosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 267,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 49,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Produtos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Produtos\\Index.cshtml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Produtos\\Index.cshtml",
+              "RelativeToolTip": "Views\\Produtos\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T03:21:09.443Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RequestAPI.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Request\\RequestAPI.cs",
+              "RelativeDocumentMoniker": "Request\\RequestAPI.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Request\\RequestAPI.cs",
+              "RelativeToolTip": "Request\\RequestAPI.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAiwBgAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T02:56:43.262Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "requests.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Services\\requests.cs",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Services\\requests.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Services\\requests.cs",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Services\\requests.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwEcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T03:44:23.463Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Fornecedores.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Models\\Fornecedores.cs",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Models\\Fornecedores.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Models\\Fornecedores.cs",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Models\\Fornecedores.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T04:23:13.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FornecedorPage.xaml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\FornecedorPage.xaml",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\FornecedorPage.xaml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\FornecedorPage.xaml",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\FornecedorPage.xaml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAE0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-09T04:16:04.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FornecedorPage.xaml.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\FornecedorPage.xaml.cs",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\FornecedorPage.xaml.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\FornecedorPage.xaml.cs",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\FornecedorPage.xaml.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAADwvzgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T04:16:02.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Produtos.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Models\\Produtos.cs",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Models\\Produtos.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Models\\Produtos.cs",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Models\\Produtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T04:00:56.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Cadastro.xaml.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\Cadastro.xaml.cs",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\Cadastro.xaml.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\Cadastro.xaml.cs",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\Cadastro.xaml.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T04:00:34.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AboutPage.xaml.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\AboutPage.xaml.cs",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\AboutPage.xaml.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\AboutPage.xaml.cs",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\AboutPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T03:38:16.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\LoginPage.xaml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-09T03:18:21.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CadastroProdutoPage.xaml.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\CadastroProdutoPage.xaml.cs",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\CadastroProdutoPage.xaml.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\CadastroProdutoPage.xaml.cs",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\CadastroProdutoPage.xaml.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAEwFsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T03:43:41.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PedidosPage.xaml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\PedidosPage.xaml",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\PedidosPage.xaml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\PedidosPage.xaml",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\PedidosPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-04T03:40:35.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ItemsPage.xaml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\ItemsPage.xaml",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\ItemsPage.xaml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\ItemsPage.xaml",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\ItemsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-04T03:35:45.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cadastro.xaml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\Cadastro.xaml",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\Cadastro.xaml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\Cadastro.xaml",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\Cadastro.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-04T03:33:39.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AboutPage.xaml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\AboutPage.xaml",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\AboutPage.xaml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\AboutPage.xaml",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\AboutPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-04T03:32:47.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "NewItemPage.xaml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\NewItemPage.xaml",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\NewItemPage.xaml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\NewItemPage.xaml",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\NewItemPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-04T03:32:39.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CarrinhoPage.xaml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\CarrinhoPage.xaml",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\CarrinhoPage.xaml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\CarrinhoPage.xaml",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\CarrinhoPage.xaml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-04T03:32:32.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CadastroProdutoPage.xaml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\CadastroProdutoPage.xaml",
+              "RelativeDocumentMoniker": "..\\AppMobileUrban\\AppMobileUrban\\Views\\CadastroProdutoPage.xaml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\AppMobileUrban\\AppMobileUrban\\Views\\CadastroProdutoPage.xaml",
+              "RelativeToolTip": "..\\AppMobileUrban\\AppMobileUrban\\Views\\CadastroProdutoPage.xaml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-04T03:25:34.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Classes\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Domain\\Classes\\EmailSettings.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Classes\\EmailSettings.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Domain\\Classes\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:50:34.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "FormFornecedor.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Desktop\\FormFornecedor.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Desktop\\FormFornecedor.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Desktop\\FormFornecedor.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Desktop\\FormFornecedor.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAgwDwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:48:25.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ServiceModule.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\IoC\\Modules\\ServiceModule.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarmingAPI\\IoC\\Modules\\ServiceModule.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\IoC\\Modules\\ServiceModule.cs",
+              "RelativeToolTip": "..\\UrbanFarmingAPI\\IoC\\Modules\\ServiceModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:37:49.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProdutosController.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Controllers\\ProdutosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutosController.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Controllers\\ProdutosController.cs",
+              "RelativeToolTip": "Controllers\\ProdutosController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAhwBQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:32:30.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Produtos.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Classes\\Produtos.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Domain\\Classes\\Produtos.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Classes\\Produtos.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Domain\\Classes\\Produtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:31:40.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Classes\\Pedido.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Domain\\Classes\\Pedido.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Classes\\Pedido.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Domain\\Classes\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:27:28.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PedidosController.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Controllers\\PedidosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PedidosController.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Controllers\\PedidosController.cs",
+              "RelativeToolTip": "Controllers\\PedidosController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:25:50.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Service\\AppService\\EmailService.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Service\\AppService\\EmailService.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Service\\AppService\\EmailService.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Service\\AppService\\EmailService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:23:25.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Interfaces\\Services\\IEmailService.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Domain\\Interfaces\\Services\\IEmailService.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Interfaces\\Services\\IEmailService.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Domain\\Interfaces\\Services\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:23:04.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Program.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarmingAPI\\Program.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Program.cs",
+              "RelativeToolTip": "..\\UrbanFarmingAPI\\Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAgwC4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:20:06.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PedidosService.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Service\\AppService\\PedidosService.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Service\\AppService\\PedidosService.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Service\\AppService\\PedidosService.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Service\\AppService\\PedidosService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAIwC0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:19:36.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IFornecedoresRepository.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Interfaces\\Repositories\\IFornecedoresRepository.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Domain\\Interfaces\\Repositories\\IFornecedoresRepository.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Interfaces\\Repositories\\IFornecedoresRepository.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Domain\\Interfaces\\Repositories\\IFornecedoresRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T00:14:10.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IFornecedoresService.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Interfaces\\Services\\IFornecedoresService.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Domain\\Interfaces\\Services\\IFornecedoresService.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Interfaces\\Services\\IFornecedoresService.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Domain\\Interfaces\\Services\\IFornecedoresService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T00:14:02.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FornecedoresService.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Service\\AppService\\FornecedoresService.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Service\\AppService\\FornecedoresService.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Service\\AppService\\FornecedoresService.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Service\\AppService\\FornecedoresService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAD4vx8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T00:12:55.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "FornecedoresRepository.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Repositories\\FornecedoresRepository.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Data\\Repositories\\FornecedoresRepository.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Repositories\\FornecedoresRepository.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Data\\Repositories\\FornecedoresRepository.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwEMAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T00:11:49.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FornecedorController.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Controllers\\FornecedorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FornecedorController.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Controllers\\FornecedorController.cs",
+              "RelativeToolTip": "Controllers\\FornecedorController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwCwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T23:25:50.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PedidosRepository.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Repositories\\PedidosRepository.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Data\\Repositories\\PedidosRepository.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Repositories\\PedidosRepository.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Data\\Repositories\\PedidosRepository.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwD4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T04:56:41.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\wwwroot\\js\\main.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\main.js",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\wwwroot\\js\\main.js",
+              "RelativeToolTip": "wwwroot\\js\\main.js",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAB8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-02T22:31:35.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "FornecedoresMap.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Mapping\\FornecedoresMap.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Data\\Mapping\\FornecedoresMap.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Mapping\\FornecedoresMap.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Data\\Mapping\\FornecedoresMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwDEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T00:24:49.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Fornecedores.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Classes\\Fornecedores.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Domain\\Classes\\Fornecedores.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Domain\\Classes\\Fornecedores.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Domain\\Classes\\Fornecedores.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T23:52:49.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAAMcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T05:06:57.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "FornecedoresController.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Controllers\\FornecedoresController.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarmingAPI\\Controllers\\FornecedoresController.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Controllers\\FornecedoresController.cs",
+              "RelativeToolTip": "..\\UrbanFarmingAPI\\Controllers\\FornecedoresController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAjwDQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T05:05:07.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PedidosController.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Controllers\\PedidosController.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarmingAPI\\Controllers\\PedidosController.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Controllers\\PedidosController.cs",
+              "RelativeToolTip": "..\\UrbanFarmingAPI\\Controllers\\PedidosController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T04:28:40.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Pedidos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedidos\\Index.cshtml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Pedidos\\Index.cshtml",
+              "RelativeToolTip": "Views\\Pedidos\\Index.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T03:21:05.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Menu\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Menu\\Index.cshtml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Menu\\Index.cshtml",
+              "RelativeToolTip": "Views\\Menu\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T03:20:53.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Fornecedor\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Fornecedor\\Index.cshtml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Fornecedor\\Index.cshtml",
+              "RelativeToolTip": "Views\\Fornecedor\\Index.cshtml",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAAAI8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T03:19:43.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAkwJ8AAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T03:17:40.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ProdutosService.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Service\\AppService\\ProdutosService.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Service\\AppService\\ProdutosService.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Service\\AppService\\ProdutosService.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Service\\AppService\\ProdutosService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T03:14:15.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ProdutosMap.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Mapping\\ProdutosMap.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Data\\Mapping\\ProdutosMap.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Mapping\\ProdutosMap.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Data\\Mapping\\ProdutosMap.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T03:07:41.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ProdutosRepository.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Repositories\\ProdutosRepository.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Data\\Repositories\\ProdutosRepository.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Repositories\\ProdutosRepository.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Data\\Repositories\\ProdutosRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwBwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T03:00:17.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAIA4wBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T04:29:19.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ProdutosController.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Controllers\\ProdutosController.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarmingAPI\\Controllers\\ProdutosController.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Controllers\\ProdutosController.cs",
+              "RelativeToolTip": "..\\UrbanFarmingAPI\\Controllers\\ProdutosController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvxQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T02:58:03.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "LoginRepository.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Repositories\\LoginRepository.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Data\\Repositories\\LoginRepository.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Repositories\\LoginRepository.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Data\\Repositories\\LoginRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T02:56:43.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "SegurancaController.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Controllers\\SegurancaController.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarmingAPI\\Controllers\\SegurancaController.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\Controllers\\SegurancaController.cs",
+              "RelativeToolTip": "..\\UrbanFarmingAPI\\Controllers\\SegurancaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T04:30:53.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\UrbanFarmingAPI\\appsettings.json",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingAPI\\appsettings.json",
+              "RelativeToolTip": "..\\UrbanFarmingAPI\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-26T03:49:35.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T03:49:25.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UrbanContext.cs",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Context\\UrbanContext.cs",
+              "RelativeDocumentMoniker": "..\\UrbanFarming.Data\\Context\\UrbanContext.cs",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarming.Data\\Context\\UrbanContext.cs",
+              "RelativeToolTip": "..\\UrbanFarming.Data\\Context\\UrbanContext.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAnwCMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T03:49:13.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Projetos\\TCC-Eniac-PROJECT\\UrbanFarmingWeb.UI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-26T03:48:51.936Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

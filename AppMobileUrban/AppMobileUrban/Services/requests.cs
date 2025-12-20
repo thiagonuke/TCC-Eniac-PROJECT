@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using AppMobileUrban.Models;
 using Xamarin.Forms.PlatformConfiguration;
+using System.Collections.Generic;
 
 namespace AppMobileUrban.Services
 {
@@ -62,6 +63,27 @@ namespace AppMobileUrban.Services
 
             }
             catch(Exception ex) { throw new Exception(ex.Message); }
+
+        }
+
+        public async Task<List<Fornecedores>> RetornaFornecedores()
+        {
+            try
+            {
+                var request = new RestRequest("/api/Fornecedores", Method.Get);
+                var response = await client.ExecuteAsync(request);
+
+                if (!response.IsSuccessful)
+                    throw new Exception($"Erro ao buscar fornecedores: {response.StatusCode} - {response.ErrorMessage}");
+
+                var fornecedores = JsonConvert.DeserializeObject<List<Fornecedores>>(response.Content);
+
+                return fornecedores ?? new List<Fornecedores>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
 
         }
 

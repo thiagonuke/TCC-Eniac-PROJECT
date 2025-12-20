@@ -22,6 +22,7 @@ namespace UrbanFarmingWeb.UI.Request
         public async Task<HttpResponseMessage> EfetuarCadastradoPedido(Pedido dados) => _httpClient.PostAsJsonAsync<Pedido>("/api/Pedidos/CadastrarPedido", dados).Result;
         public async Task<List<Produtos>> ListaProdutos()=> await _httpClient.GetAsync("/api/Produtos/GetAllProdutos").Result.Content.ReadFromJsonAsync<List<Produtos>>();
         public async Task<List<Pedido>> ListaPedidos() => await _httpClient.GetAsync("/api/Pedidos").Result.Content.ReadFromJsonAsync<List<Pedido>>();
+        public async Task<List<Fornecedores>> GetFornecedores() => await _httpClient.GetAsync("/api/Fornecedores").Result.Content.ReadFromJsonAsync<List<Fornecedores>>();
 
     }
 }

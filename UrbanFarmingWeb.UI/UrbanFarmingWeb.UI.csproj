@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UrbanFarming.Domain\UrbanFarming.Domain.csproj" />
+    <ProjectReference Include="..\UrbanFarming.Service\UrbanFarming.Service.csproj" />
   </ItemGroup>
 
 </Project>

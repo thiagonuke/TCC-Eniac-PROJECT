@@ -10,10 +10,15 @@ namespace UrbanFarming.Service.AppService
     public class PedidosService : IPedidosService
     {
         private readonly IPedidosRepository _PedidosRepository;
-
-        public PedidosService(IPedidosRepository PedidosRepository)
+        private readonly EmailService _emailService;
+        private readonly IProdutosRepository _ProdutoRepository;
+        private readonly IFornecedoresRepository _FornecedoresRepository;
+        public PedidosService(IPedidosRepository PedidosRepository, EmailService emailService, IProdutosRepository produtosRepository, IFornecedoresRepository fornecedoresRepository)
         {
             _PedidosRepository = PedidosRepository;
+            _emailService = emailService;
+            _ProdutoRepository = produtosRepository;
+            _FornecedoresRepository = fornecedoresRepository;
         }
 
         public async Task<Pedido> GetByCodigo(int codigo)
@@ -37,6 +42,21 @@ namespace UrbanFarming.Service.AppService
 
             if (!sucesso)
                 throw new Exception("Não foi possível cadastrar o Pedido.");
+
+            foreach (var item in Pedido.Itens)
+            {
+                var dados = await _ProdutoRepository.GetByCodigo(Convert.ToString(item.CodigoProduto));
+
+                var emailFornecedor = _FornecedoresRepository.GetByCodigo(dados.Fornecedor).Result;
+                var mensagemSistema = string.Empty;
+
+                mensagemSistema = emailFornecedor.MensagemPadraoEmail.Replace("{quantidade}", item.Quantidade.ToString());
+                mensagemSistema = mensagemSistema.Replace("{produto}", item.NomeProduto);
+
+
+                _emailService.EnviarEmailAsync(emailFornecedor.Email, "Pedido Zentrix", mensagemSistema);
+
+            }
 
             return sucesso;
         }

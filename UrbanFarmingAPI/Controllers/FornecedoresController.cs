@@ -51,8 +51,7 @@ namespace UrbanFarmingAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllFornecedores()
         {
-            var Fornecedores = await _fornecedoresService.GetAllFornecedores();
-            return Ok(Fornecedores);
+            return Ok(await _fornecedoresService.GetAllFornecedores());
         }
 
         [HttpPut]

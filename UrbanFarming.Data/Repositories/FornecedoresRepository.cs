@@ -25,7 +25,7 @@ namespace UrbanFarming.Data.Repositories
             }
         }
 
-        public async Task<List<Fornecedores>> GetAllFornecedores()
+        public async Task<List<Fornecedores>?> GetAllFornecedores()
         {
             return await _context.Fornecedores.ToListAsync();
         }
@@ -65,8 +65,6 @@ namespace UrbanFarming.Data.Repositories
                 fornecedorExistente.CNPJ = fornecedor.CNPJ;
                 fornecedorExistente.PaisOrigem = fornecedor.PaisOrigem;
                 fornecedorExistente.Email = fornecedor.Email;
-                fornecedorExistente.EnquadramentoEstadual = fornecedor.EnquadramentoEstadual;
-                fornecedorExistente.RamoAtividade = fornecedor.RamoAtividade;
                 fornecedorExistente.PessoaJuridica = fornecedor.PessoaJuridica;
                 fornecedorExistente.PessoaFisica = fornecedor.PessoaFisica;
                 await _context.SaveChangesAsync();

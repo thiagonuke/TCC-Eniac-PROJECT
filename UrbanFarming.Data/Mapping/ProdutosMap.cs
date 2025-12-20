@@ -8,38 +8,38 @@ namespace UrbanFarming.Data.Mapping
         public static void Map(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Produtos>()
-                .ToTable("PRODUTO");
+                .ToTable("Produtos");
 
             modelBuilder.Entity<Produtos>()
                 .HasKey(p => p.Codigo);
 
             modelBuilder.Entity<Produtos>()
                 .Property(p => p.Codigo)
-                .HasColumnName("CODIGO")
+                .HasColumnName("Codigo")
                 .HasMaxLength(20)
                 .IsRequired();
 
             modelBuilder.Entity<Produtos>()
                 .Property(p => p.Nome)
-                .HasColumnName("NOME")
+                .HasColumnName("Nome")
                 .HasMaxLength(100)
                 .IsRequired();
 
             modelBuilder.Entity<Produtos>()
                 .Property(p => p.Valor)
-                .HasColumnName("VALOR")
+                .HasColumnName("Valor")
                 .HasColumnType("decimal(18, 2)")
                 .IsRequired();
 
             modelBuilder.Entity<Produtos>()
                 .Property(p => p.Descricao)
-                .HasColumnName("DESCRICAO")
+                .HasColumnName("Descricao")
                 .HasMaxLength(500)
                 .IsRequired(false);
 
             modelBuilder.Entity<Produtos>()
                 .Property(p => p.LinkImagem)
-                .HasColumnName("LINKIMAGEM")
+                .HasColumnName("LinkImagem")
                 .HasMaxLength(255) 
                 .IsRequired(false);
         }

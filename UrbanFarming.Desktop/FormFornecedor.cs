@@ -59,8 +59,6 @@ namespace UrbanFarmingDesktop.UI
                 CNPJ = radioButtonJuridica.Checked ? cnpjLimpo : null, 
                 PaisOrigem = inputPaisOrigem.Text.Trim(),
                 Email = inputEmail.Text.Trim(),
-                EnquadramentoEstadual = radioButtonJuridica.Checked ? "Exemplo de Enquadramento" : null,
-                RamoAtividade = radioButtonJuridica.Checked ? "Exemplo de Ramo" : null,
                 PessoaJuridica = radioButtonJuridica.Checked,
                 PessoaFisica = radioButtonFisica.Checked,
             };

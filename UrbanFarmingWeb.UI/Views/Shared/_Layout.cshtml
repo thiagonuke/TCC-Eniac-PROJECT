@@ -51,10 +51,47 @@
 
     @@media (max-width: 992px) {
         #idlogo {
-            margin-left:45vw ;
+            margin-left: 45vw;
         }
     }
 
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid rgba(255, 255, 255, 0.3);
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+    }
+
+    #global-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(2px);
+        z-index: 999999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loader {
+        width: 50px;
+        height: 50px;
+        border: 6px solid rgba(255, 255, 255, 0.3);
+        border-top-color: white;
+        border-radius: 50%;
+        animation: spin 0.7s linear infinite;
+    }
+
+    @@keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
 </style>
 
 <!DOCTYPE html>
@@ -69,25 +106,25 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg shadow-lg navbar-light" style="background-color: rgb(44, 56, 64);">
+        <nav class="navbar navbar-expand-lg shadow-lg navbar-light" style="background-color: white;">
             <a class="navbar-brand" href="#"><img id="idlogo" src="~/images/logo.png" width="100" /></a>
 
             <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="../Produtos/Index">Compra de Produtos</a>
+                        <a class="nav-link text-secondary" href="../Produtos/Index">Compra de Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="../Fornecedor/Index">Cadastro de Fornecedores</a>
+                        <a class="nav-link text-secondary" href="../Fornecedor/Index">Cadastro de Fornecedores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="../Pedidos/Index">Pedidos</a>
+                        <a class="nav-link text-secondary" href="../Pedidos/Index">Pedidos</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <div class="border rounded shadow p-2 d-flex align-items-center mr-2">
                         <img src="~/images/profile-user.png" width="25" />
-                        <h6 id="usuario-nav" class="text-white ml-2"></h6>
+                        <h6 id="usuario-nav" class="text-secondary ml-2"></h6>
                     </div>
                     <a id="logout" style="cursor:pointer;">
                         <img src="~/images/logout.png" width="30" />
@@ -100,6 +137,11 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    </div>
+    <div id="global-loading"
+         style="display:none !important;"
+         class="fixed inset-0 bg-black/30 backdrop-blur-sm items-center justify-center z-[9999]">
+        <div class="loader"></div>
     </div>
 
     <footer class="footer text-muted d-flex justify-content-center">
@@ -114,7 +156,8 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -135,15 +178,17 @@
 
     });
 
-    $("#logout").on("click", function () { 
+    $("#logout").on("click", function () {
         $.ajax({
-            url: '../Seguranca/Logout',
-            method:"GET",
-            success: function (response) {
-                window.location.href = "../"
-            }
-        });
-     
+        url: '../Seguranca/Logout',
+        method: "GET",
+        beforeSend: showLoading,
+        success: function () {
+            window.location.href = "../";
+        },
+        complete: hideLoading
+    });
+
     })
 
     $(document).ready(function () {
@@ -155,5 +200,12 @@
         }
 
     });
-   
+
+    function showLoading() {
+        document.getElementById("global-loading").style.display = "flex";
+    }
+
+    function hideLoading() {
+        document.getElementById("global-loading").style.display = "none";
+    }
 </script>
